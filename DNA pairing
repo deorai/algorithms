@@ -1,0 +1,51 @@
+/*
+The purpose of this function is to take a string of letters representing DNA base pairs and return an array of arrays, where each inner array contains the original letter from the input string and its corresponding base pair.
+
+The function first creates an array of arrays with the same length as the input string. Then it loops through the array of arrays and checks the original letter from the input string at each index. If the letter is "G", it pushes the letter "G" and its base pair "C" into the inner array at that index. If the letter is "C", it pushes the letter "C" and its base pair "G" into the inner array. If the letter is "A", it pushes the letter "A" and its base pair "T" into the inner array. And if the letter is "T", it pushes the letter "T" and its base pair "A" into the inner array.
+
+Finally, the function returns the resulting array of arrays. For example, if you call the function with the following arguments:
+
+pairElement("GCG")
+
+The function will return the following array:
+
+[["G", "C"], ["C", "G"], ["G", "C"]]
+
+*/
+
+
+
+function pairElement(str) {
+
+let finalArray = [];
+//creates array of arrays with the number of str.length
+for (let i = 0; i < str.length + 1; i++) {
+  if (i > 0) {
+    let arrayConstructor = new Array();
+//pushes each array to the final array;
+finalArray.push(arrayConstructor)
+
+  }
+
+}
+
+//loops through array of arrays
+  for (let j = 0; j < finalArray.length; j++) {
+if (str.charAt(j) == "G") {
+  finalArray[j].push(str.charAt(j), "C")
+} else if (str.charAt(j) == "C") {
+  finalArray[j].push(str.charAt(j),"G")
+} else if (str.charAt(j) == "A") {
+  finalArray[j].push(str.charAt(j),"T")
+} else if (str.charAt(j) == "T") {
+  finalArray[j].push(str.charAt(j),"A")
+} 
+  
+  } 
+  
+//returns final array
+
+  return finalArray;
+}
+
+console.log(pairElement("GCG"));
