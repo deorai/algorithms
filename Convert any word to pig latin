@@ -1,0 +1,26 @@
+/*
+
+This function is a simple implementation of a Pig Latin translator. Pig Latin is a language game in which words in English are altered by moving the first consonant or consonant cluster of the word to the end of the word and adding "ay" to the end.
+
+The function takes a string as input and uses a regular expression to check if the string starts with a vowel. If it does, it simply adds "way" to the end of the string and returns it. If the string does not start with a vowel, the function uses another regular expression to find the consonant or consonant cluster at the start of the string. It then removes these consonants from the start of the string, adds them to the end, and adds "ay" to the end. Finally, it returns the transformed string.
+
+*/
+
+function translatePigLatin(str) {
+
+  //finding the vowel at the start of the string.
+  let vowelsReg = /^[aeiou]/gi;
+
+  if (vowelsReg.test(str)) {
+    return str + "way";
+  } else {
+
+    //matching first element of the array produced by match()
+    let consonants = str.match(/^[^aeiou]*/i)[0];
+
+    //slice consonants from start of string and add them to the end + "ay"
+     return str.slice(consonants.length) + consonants + "ay";
+
+    return consonants
+  }
+}
