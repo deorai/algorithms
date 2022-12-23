@@ -1,12 +1,12 @@
 /*
 
-This function takes in an array **`arr`** and returns a "steamrolled" version of the array, which flattens any nested arrays into a single array. The function uses recursion to handle arrays of any depth.
+This function takes in an array and returns a "steamrolled" version of the array, which flattens any nested arrays into a single array. The function uses recursion to handle arrays of any depth.
 
-First, the function initializes an empty array **`newArray`** that will be used to store the flattened version of **`arr`**. If **`arr`** is empty, the function immediately returns **`newArray`**.
+First, the function initializes an empty array **`newArray`** that will be used to store the flattened version of **`arr`**. If **`arr`** is empty, the function immediately returns newArray.
 
-Next, the function iterates over the elements in **`arr`** using a for loop. If an element is an array, the function recursively flattens it using the **`steamrollArray`** function and pushes the flattened result to **`newArray`**. If the element is not an array, it is pushed to **`newArray`** as is.
+Next, the function iterates over the elements in **`arr`** using a for loop. If an element is an array, the function recursively flattens it using the **`steamrollArray`** function and pushes the flattened result to **`newArray`**. If the element is not an array, it is pushed to newArray as is.
 
-Finally, the function returns **`newArray`**, which now contains the flattened version of **`arr`**.
+Finally, the function returns newArray, which now contains the flattened version of **`arr`**.
 
 */
 
