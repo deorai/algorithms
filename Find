@@ -1,0 +1,19 @@
+/*
+
+The smallestCommons function takes an array of numbers as its argument. The function then uses the Array.sort() method to sort the numbers in the array in ascending order and assigns the minimum and maximum values to the variables minNum and maxNum, respectively.
+
+*/
+
+function smallestCommons(nums) {
+  const [minNum, maxNum] = nums.sort((a, b) => a - b);
+  let scm = maxNum;
+  for (let i = maxNum - 1; i >= minNum; i--) {
+    if (scm % i !== 0) {
+      scm += maxNum;
+      i = maxNum;
+    }
+  }
+  return scm;
+}
+
+smallestCommons([1, 5]);
