@@ -1,0 +1,36 @@
+ /*
+This function defines a Person class, which is a constructor function that creates new Person objects. Each Person object has several methods
+*/
+
+const Person = function(firstAndLast) {
+  this.setFullName = function(newFullName) {
+    firstAndLast = newFullName;
+  };
+
+  this.setLastName = function(newLastName) {
+    firstAndLast = firstAndLast.split(' ')[0] + ' ' + newLastName;
+  };
+
+  this.setFirstName = function(newFirstName) {
+    firstAndLast = newFirstName + ' ' + firstAndLast.split(' ')[1];
+  };
+
+  this.getFullName = function() {
+    return firstAndLast;
+  };
+
+  this.getFirstName = function() {
+    return firstAndLast.split(' ')[0];
+  };
+
+  this.getLastName = function() {
+    return firstAndLast.split(' ')[1];
+  };
+
+  return firstAndLast;
+};
+
+const bob = new Person('Bob Ross');
+bob.getFullName();
+console.log(bob.getLastName());
+console.log(Object.keys(bob));
