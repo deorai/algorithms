@@ -1,8 +1,0 @@
-function spinalCase(str) {
-
-  
- return str.split(/(?=[A-Z])/).join(' ').replace(/_/gm, ' ').replace(/\s+/g,'-').toLowerCase()
-
-
-};
-
