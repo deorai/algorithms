@@ -1,0 +1,27 @@
+/*
+
+This function checks if the predicate (second argument) is truthy on all elements of a collection (first argument).
+
+*/
+
+function truthCheck(collection, pre) {
+  for (const obj of collection) {
+    // checks keys and returns false if any of the objects are false, breaking the loop
+    if (!obj[pre]) {
+      return false;
+    }
+  }
+  // return true by default (if all objects are false)
+  return true;
+}
+
+console.log(
+  truthCheck(
+    [
+      { name: "Quincy", role: "Founder", isBot: false },
+      { name: "Naomi", role: "", isBot: false },
+      { name: "Camperbot", role: "Bot", isBot: true },
+    ],
+    "isBot"
+  )
+);
