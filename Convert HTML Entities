@@ -1,0 +1,40 @@
+/*
+
+This function converts certain characters in a given string to their corresponding HTML entities. For example, the <character will be converted to &lt;to represent the < symbol in HTML. The function does this by splitting the string into an array of individual characters, then looping through each character and checking if it matches one of the characters that needs to be converted. If a match is found, the character is replaced with its corresponding HTML entity. Finally, the array of modified characters is joined back together into a single string and returned.
+
+*/
+
+
+function primePrinter(num) {
+  let array = [];
+  
+  function isPrime(n) {
+    if (n < 2) {
+      return false;
+    }
+
+    for (let i = 2; i < n; i++) {
+      if (n % i === 0) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  for (let i = 0; i <= num; i++) {
+    if (isPrime(i) == true) {
+      array.push(i);
+    }
+  }
+
+  let sum = 0;
+
+  for (let i = 0; i < array.length; i ++) {
+    sum += array[i];
+  }
+
+  return sum;
+}
+
+console.log(primePrinter())
