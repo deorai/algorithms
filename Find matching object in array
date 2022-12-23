@@ -1,0 +1,14 @@
+/*
+This function takes two arguments, the first is an array of objects the second is a reference object. The function checks the array of objects and returns any objects that match the reference object. 
+*/
+
+
+function whatIsInAName(collection, source) {
+    return collection.filter(function (entry) {
+        return Object.keys(source).every(function (key) {
+            return entry[key] === source[key];
+        });
+    });
+}
+
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
