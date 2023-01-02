@@ -22,7 +22,7 @@ console.log(
       { name: "Naomi", role: "", isBot: false },
       { name: "Camperbot", role: "Bot", isBot: true },
     ],
-    "isBot"
+    
   )
 );
 
