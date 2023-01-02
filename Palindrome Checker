@@ -1,0 +1,28 @@
+function palindrome(str) {
+
+  
+const trimmedStr = str.split(" ")
+.join('')
+.toLowerCase()
+.replace(/[^a-zA-Z0-9]/g, "")
+ 
+let truthString = trimmedStr
+ .split("")
+ .reverse()
+ .join("")
+ .toLowerCase()
+ .replace(/[^a-zA-Z0-9]/g, "");
+
+
+if (trimmedStr == truthString) {
+return true;
+
+}
+console.log(trimmedStr)
+console.log(truthString)
+
+
+   return false
+}
+
+console.log(palindrome("My age is 0, 0 si ega ym."));
