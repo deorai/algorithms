@@ -1,3 +1,12 @@
+/*
+
+This function checks if a given string is a palindrome by ignoring spaces, capitalization, and non-alphanumeric characters. It returns a boolean value indicating whether the string is a palindrome or not.
+
+*/
+
+
+
+
 function palindrome(str) {
 
   
@@ -22,7 +31,7 @@ console.log(trimmedStr)
 console.log(truthString)
 
 
-   return false
+   return false;
 }
 
-console.log(palindrome("My age is 0, 0 si ega ym."))
+console.log(palindrome("My age is 0, 0 si ega ym."));
